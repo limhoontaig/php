@@ -3,9 +3,10 @@
 <html>
  <head>
  <title>A File Upload Script</title>
+ <h1> 임훈택의 시험 홈페이지 입니다. <br/> Hello PHP </h1>
  </head>
  <?php
-  echo "Hello PHP<br/>";
+  echo "Hello PHP <br/>";
   $a = 1; // 정수 int
   $b = 2; // 정수 int
   $c = $a + $b; // 정수 계산
