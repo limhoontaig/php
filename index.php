@@ -5,6 +5,7 @@
  <title>A File Upload Script</title>
  <h1> 임훈택의 시험 홈페이지 입니다. <br/> Hello PHP </h1>
  </head>
+ <a href="file:///var/www/html/arraysample.php">Go to array sample</a><br/>
  <?php
   echo "Hello PHP <br/>";
   $a = 1; // 정수 int
