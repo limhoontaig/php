@@ -54,7 +54,7 @@ if (mysqli_connect_errno()) {
 echo "test conection is success. <br/>";
 
 $query = "select 
-  e.emp_no, e.first_name, e.last_name, e.hire_date, s.salary, s.from_date, s.to_date, t.title
+  e.emp_no, e.first_name, e.last_name, e.hire_date, s.salary, s.from_date, s.to_date, t.title, t.from_date, t.to_date
 from 
   employees e,
   salaries s, 
@@ -89,6 +89,8 @@ if(mysqli_num_rows($result) > 0)
                          <th>from_date</th>
                          <th>to_date</th>
                          <th>title</th>
+                         <th>t_from_date</th>
+                         <th>t_to_date</th>
 
                     </tr>
   ';
@@ -104,6 +106,8 @@ if(mysqli_num_rows($result) > 0)
                          <td>'.$row["from_date"].'</td>
                          <td>'.$row["to_date"].'</td>
                          <td>'.$row["title"].'</td>
+                         <td>'.$row["from_date"].'</td>
+                         <td>'.$row["to_date"].'</td>
 
 
                     </tr>
