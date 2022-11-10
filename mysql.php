@@ -24,8 +24,10 @@
   border: 1px solid #ccc;
   }
  </style>-->
+ <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<p> A mozilla and some paragraphs. The paragraph text has been styled red by our css.<br/> <p/>
 <marquee direction="up" bgcolor="yellow" behavior="scroll"
   width="200" height="100" scrolldelay="5">
   임훈택 PHP MySQL
@@ -50,8 +52,23 @@
   <input type="submit" value="보내기" name="Submit">
   <input type="reset" value="취소" name="Reset">
  </form> -->
+<form atcion="192.168.0.29" method="post"> 
+ <label for="pet-select">Choose a pet:</label>
+
+ <select name="pets" id="pet-select">
+    <option value="">--Please choose an option--</option>
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="hamster">Hamster</option>
+    <option value="parrot">Parrot</option>
+    <option value="spider">Spider</option>
+    <option value="goldfish">Goldfish</option>
+ </select>
+ <input type="submit">
+ </form>
+ <br/><br/>
  <form method="post">
-    Employee Number : <input type="text" name="emp_no" />
+    Employee Number : <input type="text" name="emp_no" />&nbsp&nbsp
     age : <input type="text" name="age" />
     <input type="submit" />
 </form>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>회원가입</title>
+	<style type="text/css">
+	body{
+		font-family: 'Nanum Myeongjo', serif;
+	}
+	table, th, td{
+		border-collapse : collapse;
+		text-align : center;
+	}
+	table{
+		background-color: #FAC8C8;
+		font-family : 
+	}
+	</style>
+</head>
+<body>
+	<table width="500" height="500" align="center" style="margin-top:150px;">
+		<form name="reg" action="regresult.jsp" method="get">
+		<tr>
+			<th colspan="2" height="80">회원가입</th>
+		</tr>
+		<tr>
+			<th>아이디</th>
+			<td><input type="text" name="id"></td>
+		</tr>
+		<tr>
+			<th>비밀번호</th>
+			<td><input type="password" name="pass"></td>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<th>메일</th>
+			<td><input type="text" name="email"></td>
+		</tr>
+		<tr>
+			<th>연락처</th>
+			<td><input type="text" name="tel1" size="3"> - 
+				<input type="text" name="tel2" size="4"> - 
+				<input type="text" name="tel3" size="4"></td>
+		</tr>
+		<tr>
+			<td colspan="2"></td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2"><input type="submit" value="가입하기" style="font-family: 'Nanum Myeongjo', serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="취소하기" style="font-family: 'Nanum Myeongjo', serif;" ></td>
+		</tr>
+		</form>
+	</table>
+</body>
+</html>
