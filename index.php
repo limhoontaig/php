@@ -4,8 +4,15 @@
  <head>
  <title>A File Upload Script</title>
  <h1> 임훈택의 시험 홈페이지 입니다. <br/> Hello PHP </h1>
+
+<!-- HTML Link Colors Style of CSS -->
+<link rel="stylesheet" href="styles.css">
+
  </head>
- <a href="file:///var/www/html/arraysample.php">Go to array sample</a><br/>
+ <a href="arraysample.php">Go to array sample</a><br/>
+ <a href="floatPropertyExample.html" target="_self">Go to Float Property Example</a><br/> 
+ <a href="flexboxPropertyExample.html" target="_self">Go to Flexbox Property Example</a><br/>
+ 
  <?php
   echo "Hello PHP <br/>";
   $a = 1; // 정수 int

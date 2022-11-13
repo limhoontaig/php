@@ -1,4 +1,5 @@
 <!doctype html>
+<a href="index.php"><h1>Go to Lim's Home</h1></a><br/>
 <?php
   echo "arraysample file입니다. <br/>";
   // 일반 배열
