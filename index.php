@@ -12,6 +12,14 @@
  <a href="arraysample.php">Go to array sample</a><br/>
  <a href="floatPropertyExample.html" target="_self">Go to Float Property Example</a><br/> 
  <a href="flexboxPropertyExample.html" target="_self">Go to Flexbox Property Example</a><br/>
+ <a href="funcs.php" target="_self">Go to funcs.php</a><br/>
+ <a href="get.php" target="_self">Go to get.php</a><br/>
+ <a href="html_table.php" target="_self">Go to html_tble.php</a><br/>
+ <a href="inc.php" target="_self">Go to inc.php</a><br/>
+ <a href="json.php" target="_self">Go to json.php</a><br/>
+ <a href="logic_operator.php" target="_self">Go to logic_operator.php</a><br/>
+ <a href="loop.php" target="_self">Go to loop.php</a><br/>
+ <a href="main.php" target="_self">Go to main.php</a><br/>
  
  <?php
   echo "Hello PHP <br/>";
