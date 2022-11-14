@@ -6,10 +6,20 @@
     <body>
         <?php
         $connect= mysqli_connect("localhost","limht","secret","employees");
-        $emp_no = mysqli_query($connect, set @emp_no = (select max(emp_no) from employees) + 1);
-
-        echo "<h1> dump_var($emp_no) </h1>";
+        $sql = "select max(emp_no) from employees;";
+        $result = mysqli_query($connect, $sql);
+        echo var_dump($result);
+        
+        /*if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "Maximum emp_id".$row["max(emp_no)"]. "<br>"
+            }
+        }*/
+        /* echo "<h1> <?php var_dump($result) ?> </h1>";*/
+        
         ?>
+        <br>
 
 
 
