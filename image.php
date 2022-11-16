@@ -19,13 +19,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // $age = $_POST['age'];
 }
 
-$dir = "/home/limht/ftp/files/";
+// $dir = "/home/limht/ftp/files";
+$dir="/var/www/html";
 echo "<h3>현재의 디렉토리 Current Directory: $dir</h3>";
 // echo "<br>";
 $files = scandir($dir, $order); // 1 option descending order
-print_r("<h1> test</h1>");
-print_r($files);
-echo count($files);
+// print_r("<h1> test</h1>");
+// print_r($files);
+// echo count($files);
 // echo "oooo" ;
 // echo "-----";
 foreach ($files as $file) {
