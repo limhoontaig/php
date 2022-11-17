@@ -20,17 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // $dir = "/home/limht/ftp/files";
-$dir="/var/www/html";
+$dir="./files";
 echo "<h3>현재의 디렉토리 Current Directory: $dir</h3>";
 // echo "<br>";
 $files = scandir($dir, $order); // 1 option descending order
 // print_r("<h1> test</h1>");
-// print_r($files);
-// echo count($files);
+print_r($files);
+echo count($files);
 // echo "oooo" ;
 // echo "-----";
 foreach ($files as $file) {
-    $files_tag .= '<a href="'.$file. '"> Go To ' .$file.'<a/><br>';
+    $files_tag .= '<a href="'.$dir.'/'.$file. '"> Go To ' .$dir.'/'.$file.'<a/><br>';
 }
 echo $files_tag;
 // print_r($files_tag);
