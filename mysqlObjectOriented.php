@@ -13,17 +13,24 @@
     <!-- age : <input type="text" name="age" /><br>-->
     <input type="submit" />
 </form>
+<a href="index.php">Go To index.php</a><br>
+
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $emp_no = $_POST['emp_no'];
-  $age = $_POST['age'];
 }
-$con = mysqli_connect("localhost","limht","secret","employees");
+// defile variables for tht server connection of MySQL
+$servername = "localhost";
+$username = "limht";
+$password = "secret";
+$dbname = "employees";
+
+// Create connection
+$con = new mysqli($servername,$username,$password,$dbname);
 
 // Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  exit();
+if ($con->connect_error) {
+  die("Connection failed: " . $con->connect_error);
 }
 
 $query = "select 
@@ -42,12 +49,11 @@ WHERE
   and e.emp_no = $emp_no
 Order by s.from_date";
 
-$result = mysqli_query($con, $query);
+$result = $con->query($query);
 // var_dump($result);
-echo "<a href='index.php'>Go To index.php</a><br>";
 echo "<br/>";
 
-if(mysqli_num_rows($result) > 0)
+if($result->num_rows > 0)
   {
   $table = '
   <table border="1" bordercolor="red" border-collapse="collapse">
@@ -65,7 +71,7 @@ if(mysqli_num_rows($result) > 0)
       <th>t_to_date</th>
     </tr>
   ';
-  while($row = mysqli_fetch_array($result))
+  while($row = $result->fetch_assoc())
   {
    $table .= '
     <tr>
@@ -84,7 +90,10 @@ if(mysqli_num_rows($result) > 0)
   }
   $table .= '</table>';
   echo $table;
+ } else {
+  echo "0 results";
  }
+ $conn->close();
 ?>
   </body>
 </html>
