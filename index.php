@@ -34,9 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // echo "<br>";
 $files = scandir($dir, $order); // 1 option descending order
- 
+$no = 0; 
 foreach ($files as $file) {
-    $files_tag .= '<a href="'.$file. '"> Go To ' .$file.'<a/><br>';
+    ++$no;
+    $files_tag .= $no.'. '.'<a href="'.$file. '"> Go To ' .$file.'<a/><br>';
 }
 echo $files_tag;
  
