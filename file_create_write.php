@@ -1,4 +1,6 @@
 <?php
+// $username = posix_getpwuid(posix_geteuid())['name'];
+// echo 'username ='.$username;
 $file = "newfile.txt";
 chmod($file, 0666);
 $myfile = fopen($file, "w") or die("Unable to open file!");
