@@ -18,7 +18,7 @@ class Fruit {
 $mango = new Fruit();
 $mango->set_name('Mango'); // OK
 echo "Fruit name is {$mango->name}.<br>";
-echo "This file is sampe program of protected and private access modifiers are not allowed outside class.";
+echo "This file is a sampe program of protected and private access modifiers are not allowed outside class.";
 /* 1try {
     $mango->set_color('Yellow'); // ERROR
 } catch (Exception $e) {
