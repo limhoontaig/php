@@ -13,36 +13,36 @@
         echo "history.back();</script>";
         exit;
     }
-    echo "$_FILES<br>";
-    $c = count($_FILES);
-    echo "Count of files : $c <br>"; 
-
-
+    
     $date = date("YmdHis", time());
-    echo "Date is $date <br>";
-    $dir = "./files/";
-    echo "$dir <br>";
+    $dir = "/files/";
+
     $file_hash = $date.$_FILES['file']['name'];
-    echo "$file_hash <br>";
     $file_hash = md5($file_hash);
-    echo "$file_hash <br>";
     $upfile = $dir.$file_hash;
-    echo "$upfile <br>";
+    
     print_r($_FILES);
-    if(move_uploaded_file($_FILES['file']['tmp_name'], $upfile))
+    if(is_uploaded_file($_FILES['file']['tmp_name']))
+    {
+        echo "File ". $_FILES['file']['name'] ." uploaded successfully.\n";
+        echo "Displaying contents\n";
+        readfile($_FILES['file']['tmp_name']);
+    } else {
+        echo "Possible file upload attack: ";
+        echo "filename '". $_FILES['file']['tmp_name'] . "'.";
+    }
+    
+    if(!move_uploaded_file($_FILES['file']['tmp_name'], $upfile))
         {
-            echo "$_FILES <br>";
-            echo "<br>";
-            echo "upload error 001";
-            // exit;
-            echo "File is valid, and was successfully uploaded.\n";
+            echo "upload error";
+            exit;
     } else {
             echo "Possible file upload attack!\n";
     }
-    /*
-    if(is_uploaded_file($_FILES['file']['tmp_name']))
+    
+    /*if(is_uploaded_file($_FILES['file']['tmp_name']))
     {
-        if(move_uploaded_file($_FILES['file']['tmp_name'], $upfile))
+        if(!move_uploaded_file($_FILES['file']['tmp_name'], $upfile))
         {
             echo "$_FILES <br>";
             echo "<br>";
@@ -72,7 +72,7 @@
 
     echo "<script>alert('업로드 성공');";
     echo "history.back();</script>";
-
+ 
     
 
 ?>
